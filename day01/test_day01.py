@@ -1,13 +1,16 @@
-def fizzbuzz_value(n:int):
-    if not (isinstance(n, int)):
-        raise TypeError(f"Expected int")
-
-    if n < 0:
-        raise Exception("Value must be larger  than 0")
-    if n >100:
-        raise Exception("Number can not be larger than 100")
-    
-    print(n)
+from fizzbuzz_variant import fizzbuzz_variant
 
 
-fizzbuzz_value("22")
+def test_fizzbuzz():
+    assert fizzbuzz_variant(3)=="Fizz"
+    assert fizzbuzz_variant(5)=="Buzz"
+    assert fizzbuzz_variant(15)=="FizzBuzz"
+    assert fizzbuzz_variant(3)=="Fizz"
+    assert fizzbuzz_variant(3)=="Fizz"
+    assert fizzbuzz_variant(3)=="Fizz"
+   # Edge Cases
+    assert fizzbuzz_variant(1) == "1"
+    assert fizzbuzz_variant(0) == "FizzBuzz" 
+    print("✅ All FizzBuzz tests passed!")
+
+test_fizzbuzz()

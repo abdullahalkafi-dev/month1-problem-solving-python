@@ -10,6 +10,7 @@ def clamp_score(n: int) -> int:
     return n
 
 
-print(clamp_score(-10))  # print 0
-print(clamp_score(10))  # print 10
-print(clamp_score(105))  # print 100
+if __name__ == "__main__":
+    print(clamp_score(-10))  # print 0
+    print(clamp_score(10))  # print 10
+    print(clamp_score(105))  # print 100
