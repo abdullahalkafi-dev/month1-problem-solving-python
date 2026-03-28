@@ -1,4 +1,4 @@
-def deduplicate(data: list[int]) -> list[int]:
+def deduplicate(data: list[any]) -> list[any]:
     """
     Removes duplicates from a list but keeps the original order.
 
@@ -16,4 +16,5 @@ def deduplicate(data: list[int]) -> list[int]:
     return orderedResult
 
 
-print(deduplicate([3, 1, 3, 2, 1, 5, 2]))
+if __name__ == "__main__":
+    print(deduplicate([3, 1, 3, 2, 1, 5, 2]))
