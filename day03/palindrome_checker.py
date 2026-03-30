@@ -13,7 +13,7 @@ def palindrome_checker(s: str) -> bool:
     return True
 
 
-def palindrome_checker_slice(s: str) -> str:
+def palindrome_checker_slice(s: str) -> bool:
     """Takes a string and returns True if it is a palindrome using string slicing."""
     if not isinstance(s, str):
         raise TypeError("only string is allowed")
