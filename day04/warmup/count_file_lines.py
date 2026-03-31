@@ -7,7 +7,7 @@ def count_file_lines(filename: str) -> int:
     The text is split by '.', '?', and '!'. Empty pieces are ignored.
     """
     try:
-        with open(filename, "r") as file:
+        with open(filename, "r", encoding="utf-8") as file:
             content = file.read()
             raw_lines = re.split(r"[.?!]", content)
             lines = [s.strip() for s in raw_lines if s.strip()]
