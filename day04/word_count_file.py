@@ -17,4 +17,4 @@ def count_words_in_file(path: str) -> dict[str, int]:
         print("file was not found")
         return {}
 if __name__ == "__main__":
-    print(count_words_in_file("../textfile.txt"))
+    print(count_words_in_file("./textfile.txt"))
