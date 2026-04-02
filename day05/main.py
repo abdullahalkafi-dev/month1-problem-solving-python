@@ -1,8 +1,5 @@
-from bank_account import BankAccount
+import uvicorn
 
 
-account = BankAccount("ab-12", "John Doe", 1000)
-account.get_balance()
-account.deposit(500)
-account.withdraw(400)
-print(account.get_balance())
+if __name__ == "__main__":
+	uvicorn.run("api:app", host="127.0.0.1", port=8000, reload=True)
