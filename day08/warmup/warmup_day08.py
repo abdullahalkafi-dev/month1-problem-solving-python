@@ -28,7 +28,26 @@ def max_sum_subarray_k(arr, k) -> int:
     return max_sum
 
 
+def range_sum(arr, l, r) -> int:
+    n = len(arr)
+    if n == 0:
+        raise ValueError("Array is empty.")
+    if l < 0 or r >= n:
+        raise ValueError("Out of bounds.")
+    if l > r:
+        raise ValueError("Left index cannot be greater than right index.")
+
+    total = 0
+
+    for i in range(l, r + 1):
+        total += arr[i]
+
+    return total
+
+
 if __name__ == "__main__":
-    # print(first_window_sum([2,1,5,1,3,2],3))
+    print(first_window_sum([2,1,5,1,3,2],3))
     print(max_sum_subarray_k([2, 1, 5, 1, 3, 2], 3))
     print(max_sum_subarray_k([-1, -2, -3], 2))
+    print(range_sum([1, 2, 3, 4, 5], 1, 3))
+    print(range_sum([10], 0, 0))
